@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #FFD54F;
+}
+
+/* Sections */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.section {
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2E7D32;
+}
+
+/* Products Section */
+.products {
+  background: linear-gradient(135deg, #fff8f0, #ffe4cc);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  width: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin: 10px 0;
+}
+
+/* Button */
+.product-card button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #e67e22;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background: #cf650d;
+}
+
+/* Order Modal */
+.order-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.order-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  animation: slideDown 0.4s ease;
+  position: relative;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.order-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.order-content label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+.order-content input,
+.order-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.order-content textarea {
+  resize: none;
+  height: 80px;
+}
+
+.order-content button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #e67e22;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.order-content button:hover {
+  background: #cf650d;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.order-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.order-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Payment Modal Styling */
+.payment-box {
+  max-width: 450px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.payment-box h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.bill {
+  background: #f9f9f9;
+  border: 2px dashed #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.bill p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.bill p strong {
+  color: #2c3e50;
+}
+
+.payment-method {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.payment-method label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.payment-method select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background: #27ae60;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirm-btn:hover {
+  background: #219150;
+}
+
+/* Lifecycle */
+.lifecycle-steps {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.lifecycle-steps .step {
+  background: #E8F5E9;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+/* Benefits */
+.benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+.benefits li {
+  background: #E8F5E9;
+  margin: 0.6rem 0;
+  padding: 0.8rem;
+  border-left: 5px solid #4CAF50;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  background: #2E7D32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+/* =====================
+   Areas Section Styling
+ /* =====================
+   Areas Section Styling
+   ===================== */
+.section.areas {
+  padding: 3rem 2rem;
+  background: #f9fafc;
+  text-align: center;
+}
+
+.section.areas h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.section.areas p {
+  color: #666;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Grid layout */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Area Card */
+.area-card {
+  background: #ffffff;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #2c3e50;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.area-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.area-card h3 {
+  font-size: 1.3rem;
+  margin: 0.8rem 0 0.3rem;
+  color: #1d3557;
+}
+
+.area-card p {
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0 1rem 1rem;
+}
+
+/* Hover effect */
+.area-card:hover {
+  transform: translateY(-8px);
+  border-color: #0077ff;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+}
+
+.area-card:hover img {
+  transform: scale(1.05);
+}

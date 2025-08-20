@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sangamner Sericulture Products</title>
+  <link rel="stylesheet" href="area.css">
+</head>
+<body>
+  <header>
+    <h1>Sericulture in Sangamner</h1>
+    <p>Trusted farmers producing high-quality silkworm products</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Sangamner</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- About Sangamner -->
+    <section class="section about" id="about">
+      <h2>About Sericulture in Sangamner</h2>
+      <p>
+        Sangamner, located in Ahmednagar district, is one of the important hubs of 
+        sericulture in Maharashtra. Farmers here cultivate mulberry and rear silkworms 
+        for high-quality cocoons and eggs. The favorable climate and farming practices 
+        make Sangamner a reliable source of silk products.
+      </p>
+    </section>
+
+    <!-- Products Section -->
+<!-- Products Section -->
+<section class="section products" id="products">
+  <h2>Products from Sangamner</h2>
+  <div class="product-grid">
+    
+    <!-- Product 1: Cocoons -->
+    <div class="product-card">
+      <img src="cocon.jpeg" alt="Silkworm Cocoons">
+      <div class="card-content">
+        <h3>Silkworm Cocoons</h3>
+        <p>Fresh cocoons from Sangamner farmers.</p>
+        <p class="price">₹850 / kg</p>
+        <button onclick="openOrder('Cocoons - Sangamner')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 2: Eggs -->
+    <div class="product-card">
+      <img src="eggs.jpeg" alt="Silkworm Eggs">
+      <div class="card-content">
+        <h3>Silkworm Eggs</h3>
+        <p>High-quality disease-free eggs.</p>
+        <p class="price">₹320 / box</p>
+        <button onclick="openOrder('Eggs - Sangamner')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 3: Live Silkworms -->
+    <div class="product-card">
+      <img src="silk.jpeg" alt="Live Silkworms">
+      <div class="card-content">
+        <h3>Live Silkworms</h3>
+        <p>Healthy live silkworms for rearing.</p>
+        <p class="price">₹500 / 100 worms</p>
+        <button onclick="openOrder('Live Silkworms - Sangamner')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 4: Silk Yarn -->
+    <div class="product-card">
+      <img src="yarn.jpeg" alt="Silk Yarn">
+      <div class="card-content">
+        <h3>Silk Yarn</h3>
+        <p>Finest quality silk yarn directly from farmers.</p>
+        <p class="price">₹1500 / kg</p>
+        <button onclick="openOrder('Silk Yarn - Sangamner')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 5: Mulberry Leaves -->
+    <div class="product-card">
+      <img src="mulberry.jpeg" alt="Mulberry Leaves">
+      <div class="card-content">
+        <h3>Mulberry Leaves</h3>
+        <p>Fresh mulberry leaves for silkworm feeding.</p>
+        <p class="price">₹200 / bundle</p>
+        <button onclick="openOrder('Mulberry Leaves - Sangamner')">Order Now</button>
+      </div>
+    </div>
+    
+    <!-- Product: Chrysalis Powder -->
+<div class="product-card">
+  <img src="chrysalis.jpeg" alt="Chrysalis Powder">
+  <div class="card-content">
+    <h3>Chrysalis Powder</h3>
+    <p>Natural chrysalis powder with medicinal and nutritional benefits.</p>
+    <p class="price">₹750 / 500g</p>
+    <button onclick="openOrder('Chrysalis Powder - Sangamner')">Order Now</button>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <!-- Order Modal -->
+    <div class="order-modal" id="orderModal">
+      <div class="order-content">
+        <span class="close-btn" onclick="closeOrder()">&times;</span>
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+          <label for="product">Product</label>
+          <input type="text" id="product" name="product" readonly>
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
+
+          <label for="address">Address</label>
+          <textarea id="address" name="address" required></textarea>
+
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" min="1" required>
+
+          <button type="submit">Submit Order</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="order-modal" id="paymentModal">
+      <div class="order-content payment-box">
+        <span class="close-btn" onclick="closePayment()">&times;</span>
+        <h2>Payment Invoice</h2>
+        <div class="bill" id="paymentDetails"></div>
+        <div class="payment-method">
+          <label for="paymentMethod">Select Payment Method</label>
+          <select id="paymentMethod" required>
+            <option value="">--Choose--</option>
+            <option value="UPI">UPI</option>
+            <option value="Card">Credit/Debit Card</option>
+            <option value="COD">Cash on Delivery</option>
+          </select>
+        </div>
+        <button class="confirm-btn" onclick="confirmPayment()">💳 Confirm Payment</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sericulture Co. | All Rights Reserved</p>
+  </footer>
+
+  <script src="payment.js"></script>
+</body>
+</html>
