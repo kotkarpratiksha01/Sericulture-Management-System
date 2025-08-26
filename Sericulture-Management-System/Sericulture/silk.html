@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sericulture - Silkworm Products</title>
+  <link rel="stylesheet" href="silk.css">
+</head>
+<body>
+  <header>
+    <h1>Sericulture - Silkworm Products</h1>
+    <p>High-quality silkworms and cocoons for silk production</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#lifecycle">Lifecycle</a>
+      <a href="#areas">Areas</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <h2>About Silkworms</h2>
+      <p>
+        Silkworms (<em>Bombyx mori</em>) are the larvae of silk moths. They have been cultivated
+        for thousands of years for producing silk. The process of rearing silkworms and extracting
+        silk from their cocoons is called <strong>sericulture</strong>.
+      </p>
+    </section>
+
+    <!-- Product Section -->
+    <div class="section products" id="products">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="silk.jpeg" alt="Silkworms">
+          <div class="card-content">
+            <h3>Silkworms (Live)</h3>
+            <p>Healthy live silkworms for sericulture farms.</p>
+            <p class="price">₹500 / 100 worms</p>
+            <button onclick="openOrder('Silkworms (Live)')">Order Now</button>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="cocon.jpeg" alt="Silkworm Cocoons">
+          <div class="card-content">
+            <h3>Silkworm Cocoons</h3>
+            <p>Premium cocoons for producing high-quality silk.</p>
+            <p class="price">₹800 / kg</p>
+            <button onclick="openOrder('Silkworm Cocoons')">Order Now</button>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="eggs.jpeg" alt="Silkworm Eggs">
+          <div class="card-content">
+            <h3>Silkworm Eggs</h3>
+            <p>Quality eggs for reliable hatching and rearing.</p>
+            <p class="price">₹300 / box</p>
+            <button onclick="openOrder('Silkworm Eggs')">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Modal (Hidden by Default) -->
+    <div class="order-modal" id="orderModal">
+      <div class="order-content">
+        <span class="close-btn" onclick="closeOrder()">&times;</span>
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+          <label for="product">Product</label>
+          <input type="text" id="product" name="product" readonly>
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}">
+
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="Enter your delivery address" required></textarea>
+
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+
+          <button type="submit">Submit Order</button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Payment Section (Hidden by Default) -->
+<div class="order-modal" id="paymentModal">
+  <div class="order-content payment-box">
+    <span class="close-btn" onclick="closePayment()">&times;</span>
+    <h2>Payment Invoice</h2>
+
+    <div class="bill" id="paymentDetails"></div>
+
+    <div class="payment-method">
+      <label for="paymentMethod">Select Payment Method</label>
+      <select id="paymentMethod" required>
+        <option value="">--Choose--</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Credit/Debit Card</option>
+        <option value="COD">Cash on Delivery</option>
+      </select>
+    </div>
+
+    <button class="confirm-btn" onclick="confirmPayment()">💳 Confirm Payment</button>
+  </div>
+</div>
+
+
+    <!-- Lifecycle Section -->
+    <section class="section lifecycle" id="lifecycle">
+      <h2>Lifecycle of Silkworms</h2>
+      <div class="lifecycle-steps">
+        <div class="step">🥚 Egg</div>
+        <div class="step">🐛 Larva</div>
+        <div class="step">🧵 Pupa (Cocoon)</div>
+        <div class="step">🦋 Adult Moth</div>
+      </div>
+      <p>Silkworms undergo a fascinating lifecycle consisting of four main stages.</p>
+    </section>
+
+    <!-- Areas Section -->
+    <section class="section areas" id="areas">
+      <h2>Sericulture Areas</h2>
+      <p>
+        Silkworm cultivation is widely practiced in regions like <strong>Karnataka</strong>, 
+        <strong>Andhra Pradesh</strong>, <strong>Tamil Nadu</strong>, and <strong>West Bengal</strong>. 
+        Our products are sourced directly from trusted farmers in these areas to ensure 
+        authenticity and quality.
+      </p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits" id="benefits">
+      <h2>Benefits of Sericulture</h2>
+      <ul>
+        <li>✅ Provides employment to rural families</li>
+        <li>🌱 Supports sustainable agriculture</li>
+        <li>♻️ Promotes eco-friendly textile production</li>
+        <li>💰 Generates income for farmers and women workers</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any queries or bulk orders, feel free to reach out:</p>
+      <p><strong>Email:</strong> info@sericultureco.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sericulture Co. | All Rights Reserved</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="payment.js"></script>
+</body>
+</html>

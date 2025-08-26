@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sericulture Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #264653;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav .menu a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav .menu a:hover {
+      color: #e9c46a;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px 80px;
+      min-height: 90vh;
+      background: linear-gradient(135deg, #2a9d8f, #264653);
+      color: white;
+      animation: fadeIn 1s ease-in;
+      flex-wrap: wrap;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+      color: #f1f1f1;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      border: none;
+      border-radius: 8px;
+      background: #e76f51;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      background: #d45d3f;
+      transform: scale(1.05);
+    }
+
+    .hero-img {
+      width: 500px;
+      text-align: right;
+      animation: slideIn 1.4s ease-in;
+    }
+
+    @keyframes slideIn {
+      from {transform: translateX(80px); opacity: 0;}
+      to {transform: translateX(0); opacity: 1;}
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 15px 35px rgba(0,0,0,0.3);
+    }
+
+    /* Emoji that will move */
+    .emoji-down {
+      display: none;
+      font-size: 40px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #264653;
+      color: white;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-img {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+
+      nav h2 {
+        font-size: 20px;
+      }
+
+      /* Hide emoji in navbar and show below login */
+      nav h2 span {
+        display: none;
+      }
+      .emoji-down {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2><span>🌿</span> SericultureMS</h2>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Features</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Sericulture<br> Management System</h1>
+      <p>
+        Digitize your mulberry cultivation, silkworm rearing, disease monitoring, and silk production.  
+        Our system provides modern solutions for farmers, researchers, and silk industry stakeholders.
+      </p>
+      <form action="login.html" method="get" style="display:inline;">
+        <button class="btn">Login to Get Started →</button>
+      </form>
+      <!-- Emoji will appear here in mobile -->
+      <div class="emoji-down">🌿</div>
+    </div>
+    <div class="hero-img">
+      <img src="silkworm.jpeg" alt="Sericulture Image">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © <?php echo date("Y"); ?> Sericulture Management System | Designed with ❤️ for Farmers & Researchers
+  </footer>
+
+</body>
+</html>
+?>

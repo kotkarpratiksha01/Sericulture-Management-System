@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>project</title>
+  <meta charset="UTF-8">
+  <title>Sericulture - Silkworm Products</title>
+  <link rel="stylesheet" href="silk.css">
+  <style>
+    .area-card { 
+      border: 1px solid #ccc; 
+      padding: 1rem; 
+      margin: 1rem; 
+      cursor: pointer; 
+      border-radius: 8px; 
+      transition: 0.3s; 
+    }
+    .area-card:hover { background: #f0f8ff; }
+    .disease-box {
+      border: 1px solid #ddd;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .disease-box h3 { color: darkred; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sericulture - Silkworm Products</h1>
+    <p>High-quality silkworms, cocoons, and eggs for silk production</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#lifecycle"></a>
+      <a href="#areas">Areas</a>
+      <a href="#diseases">Diseases</a>
+      <a href="#benefits"></a>
+      <a href="#contact"></a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <h2>About Silkworms</h2>
+      <p>
+        Silkworms (<em>Bombyx mori</em>) are domesticated insects reared for silk production.
+        The art of cultivating silkworms is known as <strong>sericulture</strong>, a practice
+        that originated in China over 5,000 years ago and spread across Asia and the world.
+      </p>
+      <h3>Importance of Sericulture</h3>
+      <ul>
+        <li>💡 Provides livelihood for millions of rural families.</li>
+        <li>🧵 Produces silk, a luxurious and eco-friendly textile.</li>
+        <li>🌍 Boosts rural economy and women empowerment.</li>
+      </ul>
+      <h3>Uses of Silk</h3>
+      <p>Silk is widely used in clothing, medical sutures, cosmetics, and even in biotechnology due to its strength and natural protein structure.</p>
+    </section>
+
+   
+    
+<!-- Interactive Areas Section -->
+<section class="section areas" id="areas">
+  <h2>Sericulture Areas</h2>
+  <p>We source silkworm products from trusted farmers across different regions.</p>
+
+  <div class="areas-grid">
+    <a href="sangamner.html" class="area-card">
+      <img src="silkworm.jpeg" alt="Sangamner">
+      <h3>📍 Sangamner</h3>
+      <p>Premium cocoons and silkworm eggs from Sangamner farmers.</p>
+
+    </a>
+
+    <a href="akole.html" class="area-card">
+      <img src="images/akole.jpg" alt="Akole">
+      <h3>📍 Akole</h3>
+      <p>High-quality silkworm rearing and cocoon production.</p>
+    </a>
+
+    <a href="nashik.html" class="area-card">
+      <img src="images/nashik.jpg" alt="Nashik">
+      <h3>📍 Nashik</h3>
+      <p>Trusted suppliers of silkworm products in Nashik region.</p>
+    </a>
+
+    <a href="pune.html" class="area-card">
+      <img src="images/pune.jpg" alt="Pune">
+      <h3>📍 Pune</h3>
+      <p>Modern sericulture farms ensuring quality silk products.</p>
+    </a>
+  </div>
+</section>
+
+
+
+    <!-- Diseases Section -->
+    <section class="section diseases" id="diseases">
+      <h2>Silkworm Diseases & Recovery</h2>
+      <div class="disease-box">
+        <h3>Pebrine (Protozoan disease)</h3>
+        <p><strong>Symptoms:</strong> Irregular black spots on larvae, poor cocooning.</p>
+        <p><strong>Prevention:</strong> Use disease-free eggs, disinfect rearing trays.</p>
+        <p><strong>Treatment:</strong> Avoid rearing from infected moths, proper hygiene.</p>
+      </div>
+      <div class="disease-box">
+        <h3>Grasserie (Viral disease)</h3>
+        <p><strong>Symptoms:</strong> Swollen larvae with shiny skin, white liquid oozes.</p>
+        <p><strong>Prevention:</strong> Maintain low humidity, avoid overcrowding.</p>
+        <p><strong>Treatment:</strong> Remove infected worms, spray 2% bleaching powder.</p>
+      </div>
+      <div class="disease-box">
+        <h3>Flacherie (Bacterial disease)</h3>
+        <p><strong>Symptoms:</strong> Worms lose appetite, become soft and die suddenly.</p>
+        <p><strong>Prevention:</strong> Maintain cleanliness, proper leaf feeding.</p>
+        <p><strong>Medicines:</strong> Streptomycin solution in mulberry leaves.</p>
+      </div>
+      <div class="disease-box">
+        <h3>Muscardine (Fungal disease)</h3>
+        <p><strong>Symptoms:</strong> Dead larvae covered in white fungal coating.</p>
+        <p><strong>Prevention:</strong> Dry atmosphere, dust lime powder on trays.</p>
+        <p><strong>Treatment:</strong> Use 2% lime solution to disinfect rearing houses.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sericulture Co. | All Rights Reserved</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="payment.js"></script>
+  <script>
+    function showAreaProducts(area) {
+      document.getElementById("areaProducts").innerHTML = `    
+        <h3>Products available in ${area}</h3>
+        <div class="product-card">
+          <h4>Silkworm Cocoons</h4>
+          <p>Fresh cocoons supplied from ${area} farmers.</p>
+          <button onclick="openOrder('Cocoons - ${area}')">Order Now</button>
+        </div>
+        <div class="product-card">
+          <h4>Silkworm Eggs</h4>
+          <p>High-quality disease-free eggs from ${area}.</p>
+          <button onclick="openOrder('Eggs - ${area}')">Order Now</button>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
